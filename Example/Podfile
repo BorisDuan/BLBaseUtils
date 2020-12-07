@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'BLBaseUtils_Example' do
+  pod 'BLBaseUtils', :path => '../'
+
+  target 'BLBaseUtils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
