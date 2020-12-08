@@ -11,14 +11,14 @@ import UIKit
 
 extension UIView {
     
-    func addTapGesture(target: Any?, action: Selector?) {
+    public func addTapGesture(target: Any?, action: Selector?) {
         let tap = UITapGestureRecognizer(target: target, action: action)
         addGestureRecognizer(tap)
     }
     
     
     
-    func setSignUpBackShadow() {
+    public func setSignUpBackShadow() {
         
         superview?.layoutIfNeeded()
         
@@ -38,7 +38,7 @@ extension UIView {
     }
     
     
-    func setBorders(radius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
+    public func setBorders(radius: CGFloat, borderWidth: CGFloat, borderColor: UIColor) {
         
         self.layer.cornerRadius = radius
         self.layer.borderColor = borderColor.cgColor
@@ -47,7 +47,7 @@ extension UIView {
     }
     
     
-    func setCorners(radius: CGFloat) {
+    public func setCorners(radius: CGFloat) {
         
         superview?.layoutIfNeeded()
         

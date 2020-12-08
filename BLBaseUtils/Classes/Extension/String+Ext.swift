@@ -10,11 +10,11 @@ import Foundation
 
 extension String {
     
-    var isBlank: Bool {
+    public var isBlank: Bool {
       return allSatisfy({ $0.isWhitespace })
     }
     
-    func isPhoneNumber () -> Bool {
+    public func isPhoneNumber () -> Bool {
         let pattern2 = "^1[3|4|5|6|7|8|9][0-9]{9}$"
         if NSPredicate(format: "SELF MATCHES %@", pattern2).evaluate(with: self) {
             return true

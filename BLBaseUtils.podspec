@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLBaseUtils'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '彼恋基础组件'
 
 # This description is used to generate tags and improve search results.
@@ -41,9 +41,9 @@ Pod::Spec.new do |s|
   s.subspec 'Assets' do |ss|
       ss.source_files = 'BLBaseUtils/Assets/*.{swift}'
   end
-#  s.subspec 'FindPassword' do |ss|
-#      ss.source_files = 'BLSignSDK/Classes/FindPassword/*.{swift}'
-#  end
+  s.subspec 'Constants' do |ss|
+      ss.source_files = 'BLBaseUtils/Constants/*.{swift}'
+  end
   
   
   # s.resource_bundles = {

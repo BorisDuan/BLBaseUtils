@@ -9,37 +9,37 @@
 import Foundation
 import Alamofire
 
-enum MethodType {
+public enum MethodType {
     case get
     case post
 }
 
-let ABLRespStatus_Success: Int = 200//成功
-let ABLRespStatus_NoMakeFriend: Int = 201//登录成功，没有开通交友
-let ABLRespStatus_NewUser: Int = 203//验证码登录， 成功，没有注册过，需要去注册页面完善信息
+public let ABLRespStatus_Success: Int = 200//成功
+public let ABLRespStatus_NoMakeFriend: Int = 201//登录成功，没有开通交友
+public let ABLRespStatus_NewUser: Int = 203//验证码登录， 成功，没有注册过，需要去注册页面完善信息
 //let ABLRespStatus_WechatPay: Int = 202//请求成功,微信支付
-let ABLRespStatus_Error: Int = 500//失败
+public let ABLRespStatus_Error: Int = 500//失败
 
-let ABLRespKey_Code: String = "code"
-let ABLRespKey_Data: String = "data"
-let ABLRespKey_Msg: String = "msg"
+public let ABLRespKey_Code: String = "code"
+public let ABLRespKey_Data: String = "data"
+public let ABLRespKey_Msg: String = "msg"
 
-enum NetworkStatus: Int32 {
+public enum NetworkStatus: Int32 {
     case unknown          = -1//未知网络
     case notReachable     = 0//网络无连接
     case cellular         = 1//2，3，4G网络
     case wifi             = 2//wifi网络
 }
 
-typealias ABLResponseBool = (_ response: Bool) -> Void
-typealias ABLResponseSuccess = (_ response: Data) -> Void
-typealias ABLResponseFailure = (_ error: String) -> Void
-typealias ABLNetworkStatus = (_ NetworkStatus: Int32) -> Void
-typealias ABLProgressBlock = (_ progress: Int64) -> Void
+public typealias ABLResponseBool = (_ response: Bool) -> Void
+public typealias ABLResponseSuccess = (_ response: Data) -> Void
+public typealias ABLResponseFailure = (_ error: String) -> Void
+public typealias ABLNetworkStatus = (_ NetworkStatus: Int32) -> Void
+public typealias ABLProgressBlock = (_ progress: Int64) -> Void
 
-class HttpRequest {
+public class HttpRequest {
     //单例
-    static let share = HttpRequest()
+    public static let share = HttpRequest()
     private var sessionManager: Session?
     
     init() {
@@ -186,11 +186,11 @@ extension HttpRequest {
     }
 }
 
-class ABLFileConfig: NSObject {
-    var fileData : Data
-    var name : String
-    var fileName : String
-    var mimeType : String
+public class ABLFileConfig: NSObject {
+    public var fileData : Data
+    public var name : String
+    public var fileName : String
+    public var mimeType : String
     
     override init() {
         fileData = Data()
@@ -199,7 +199,7 @@ class ABLFileConfig: NSObject {
         mimeType = ""
     }
     
-    func initFile(fileData : Data,name : String,fileName : String,mimeType : String) {
+    public func initFile(fileData : Data,name : String,fileName : String,mimeType : String) {
         self.fileData = fileData
         self.name = name
         self.fileName = fileName

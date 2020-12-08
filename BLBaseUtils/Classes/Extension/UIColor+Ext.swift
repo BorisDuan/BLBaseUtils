@@ -12,7 +12,7 @@ import UIKit
 extension UIColor {
      
     // Hex String -> UIColor
-    convenience init(hexString: String) {
+    public convenience init(hexString: String) {
         let hexString = hexString.trimmingCharacters(in: .whitespacesAndNewlines)
         let scanner = Scanner(string: hexString)
          
@@ -69,7 +69,7 @@ extension UIColor {
     
     
     /// 主题颜色
-    open class var KMainColor: UIColor {
+    public class var KMainColor: UIColor {
         get {
             return self.init(red: 255/255.0, green: 68/255.0, blue: 68/255.0, alpha: 1)
         }

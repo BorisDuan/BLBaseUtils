@@ -1,16 +1,43 @@
 PODS:
-  - BLBaseUtils (0.1.0)
+  - Alamofire (5.4.0)
+  - BLBaseUtils (0.0.1):
+    - Alamofire
+    - BLBaseUtils/Assets (= 0.0.1)
+    - BLBaseUtils/Constants (= 0.0.1)
+    - BLBaseUtils/Extension (= 0.0.1)
+    - BLBaseUtils/HttpRequest (= 0.0.1)
+    - SwiftyJSON
+  - BLBaseUtils/Assets (0.0.1):
+    - Alamofire
+    - SwiftyJSON
+  - BLBaseUtils/Constants (0.0.1):
+    - Alamofire
+    - SwiftyJSON
+  - BLBaseUtils/Extension (0.0.1):
+    - Alamofire
+    - SwiftyJSON
+  - BLBaseUtils/HttpRequest (0.0.1):
+    - Alamofire
+    - SwiftyJSON
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - BLBaseUtils (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   BLBaseUtils:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLBaseUtils: dc3af7d405a74a948c8928bea6e4891288d75e7e
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  BLBaseUtils: 025b83e7cfd9bed1c793f5d15252c1169c12b7aa
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 060f39c92db1e1bb0936ddb44cf84ad277f7a56d
+PODFILE CHECKSUM: e8d3389a366501c02b5f29339682e855f060cd0a
 
 COCOAPODS: 1.10.0
