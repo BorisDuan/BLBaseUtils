@@ -39,7 +39,11 @@ public typealias ABLProgressBlock = (_ progress: Int64) -> Void
 
 public class HttpRequest {
     //单例
-    public static let share = HttpRequest()
+    public class var share : HttpRequest {
+        get {
+            return HttpRequest()
+        }
+    }
     private var sessionManager: Session?
     
     init() {
@@ -51,7 +55,7 @@ public class HttpRequest {
     
     
     ///当前网络状态
-    private var mNetworkStatus: NetworkStatus = NetworkStatus.wifi
+    public var mNetworkStatus: NetworkStatus = NetworkStatus.wifi
     
     public func getWith(url: String,
                         params: [String: Any]?,
@@ -192,7 +196,7 @@ public class ABLFileConfig: NSObject {
     public var fileName : String
     public var mimeType : String
     
-    override init() {
+    public override init() {
         fileData = Data()
         name = ""
         fileName = ""

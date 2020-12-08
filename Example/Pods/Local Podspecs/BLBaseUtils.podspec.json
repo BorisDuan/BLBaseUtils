@@ -1,6 +1,6 @@
 {
   "name": "BLBaseUtils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "彼恋基础组件",
   "description": "彼恋基础组件，包含网络封装、本地数据封装、常量定义等等",
   "homepage": "https://github.com/BorisDuan/BLBaseUtils",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/BorisDuan/BLBaseUtils.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "11.0"
